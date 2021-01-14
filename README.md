@@ -84,8 +84,8 @@
 | **Flag**               | **Description** | **gcc**            | **clang**          |
 | ---------------------- | --------------- | ------------------ | ------------------ |
 | -Tpath/to/linkerscript |                 | :heavy_check_mark: | :heavy_check_mark: |
-| -fstack-usage          |                 | :heavy_check_mark: | :white_check_mark: |
-| --print-memory-usage   |                 | :heavy_check_mark: | :white_check_mark: |
+| -fstack-usage          |                 | :heavy_check_mark: | :x:                |
+| --print-memory-usage   |                 | :heavy_check_mark: | :x:                |
 | -static                |                 | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Build System
