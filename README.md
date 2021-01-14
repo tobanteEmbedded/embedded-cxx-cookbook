@@ -4,15 +4,12 @@
 - [Hosted vs. Freestanding C++](#hosted-vs-freestanding-c--)
 - [CPUs](#cpus)
   - [ARM](#arm)
-    - [M0/M0+](#m0-m0-)
-    - [M3](#m3)
-    - [M4](#m4)
   - [AVR](#avr)
   - [RISCV](#riscv)
 - [Compilers](#compilers)
   - [GCC](#gcc)
   - [Clang](#clang)
-  - [Common Flags](#common-flags)
+  - [Language Flags](#language-flags)
   - [Architecure Flags](#architecure-flags)
   - [Optimization Flags](#optimization-flags)
   - [Debug Flags](#debug-flags)
@@ -46,11 +43,9 @@
 - 32 Bit
 - Cortex Series
 
-#### M0/M0+
-
-#### M3
-
-#### M4
+| **Feature** | **M0/M0+**         | **M3**             | **M4**             |
+| ----------- | ------------------ | ------------------ | ------------------ |
+|             | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
 ### AVR
 
@@ -68,16 +63,19 @@
 
 ### Clang
 
-### Common Flags
+### Language Flags
 
-| **Flag**                  | **Description**                                                                                 | **gcc**            | **clang**          |
-| ------------------------- | ----------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
-| `-ffreestanding`          | Enables freestanding C/C++. Default is hosted.                                                  | :heavy_check_mark: | :heavy_check_mark: |
-| `-fno-exceptions`         |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
-| `-fno-builtin`            | Disable special handling and optimizations of builtin functions like `strlen()` and `malloc()`. | :heavy_check_mark: | :heavy_check_mark: |
-| `-fno-rtti`               |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
-| `-fno-threadsafe-statics` |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
-| `-fpermissive`            |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
+| **Flag**          | **Description**                                                                                 | **gcc**            | **clang**          |
+| ----------------- | ----------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
+| `-std=c11`        | Set the language standard for C. Possible values: **90**,**11**,**17**                          | :heavy_check_mark: | :heavy_check_mark: |
+| `-std=c++17`      | Set the language standard for C++. Possible values: **98**,**11**,**14**,**17**,**20**          | :heavy_check_mark: | :heavy_check_mark: |
+| `-std=gnu11`      | Same as above, but with GNU extensions enabled. Needed for some libraries, i.e. STM32 HAL.      | :heavy_check_mark: | :heavy_check_mark: |
+| `-std=gnu++17`    | Same as above, but with GNU extensions enabled. Needed for some libraries, i.e. STM32 HAL.      | :heavy_check_mark: | :heavy_check_mark: |
+| `-ffreestanding`  | Enables freestanding C/C++. Default is hosted.                                                  | :heavy_check_mark: | :heavy_check_mark: |
+| `-fno-exceptions` |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
+| `-fno-builtin`    | Disable special handling and optimizations of builtin functions like `strlen()` and `malloc()`. | :heavy_check_mark: | :heavy_check_mark: |
+| `-fno-rtti`       |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
+| `-fpermissive`    |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
 
 ### Architecure Flags
 
