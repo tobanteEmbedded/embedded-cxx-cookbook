@@ -39,17 +39,18 @@ Cheatsheet for working with C++ in an embedded bare-metal environment.
 - 32 Bit
 - Cortex-M Series
 
-Numbers for Frequency and RAM where taken from the STM product lineup. Others manufakturers may vary, but will probably have a similar offering.
+> Numbers for Frequency, Flash & RAM where taken from the STM product lineup. Others manufakturers may vary, but will probably have a similar offering.
 
-| **Feature**             | **M0/M0+**  | **M3**       | **M4**                        | **M7**                        |
-| ----------------------- | ----------- | ------------ | ----------------------------- | ----------------------------- |
-| Microarchitecture       | ARMv6-M     | ARMv7-M      | ARMv7E-M                      | ARMv7E-M                      |
-| Interrupts              | 1-32        | 1-240        | 1-240                         | 1-240                         |
-| Frequency               | 32-64 Mhz   | 24-120 Mhz   | 48-180 Mhz                    | 200-600 Mhz                   |
-| RAM                     | 2-36 kBytes | 4-128 kBytes | 16-640 kBytes                 | 128-1024 kBytes               |
-| Floating Point (single) | :x:         | :x:          | :heavy_check_mark: (optional) | :heavy_check_mark: (optional) |
-| Floating Point (double) | :x:         | :x:          | :x:                           | :heavy_check_mark: (optional) |
-| STM Series              | L0, G0      | F1, F2, L1   | F3, F4, L4                    | F7, H7                        |
+| **Feature**             | **M0/M0+**   | **M3**         | **M4**                        | **M7**                        |
+| ----------------------- | ------------ | -------------- | ----------------------------- | ----------------------------- |
+| Microarchitecture       | ARMv6-M      | ARMv7-M        | ARMv7E-M                      | ARMv7E-M                      |
+| Interrupts              | 1-32         | 1-240          | 1-240                         | 1-240                         |
+| Frequency               | 32-64 Mhz    | 24-120 Mhz     | 48-180 Mhz                    | 200-600 Mhz                   |
+| Flash                   | 8-256 kBytes | 16-1024 kBytes | 16-2048 kBytes                | 64-2048 kBytes                |
+| RAM                     | 2-36 kBytes  | 4-128 kBytes   | 16-640 kBytes                 | 128-1024 kBytes               |
+| Floating Point (single) | :x:          | :x:            | :heavy_check_mark: (optional) | :heavy_check_mark: (optional) |
+| Floating Point (double) | :x:          | :x:            | :x:                           | :heavy_check_mark: (optional) |
+| STM Series              | L0, G0       | F1, F2, L1     | F3, F4, L4                    | F7, H7                        |
 
 ### AVR
 
