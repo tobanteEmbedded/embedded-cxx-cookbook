@@ -76,17 +76,22 @@ Cheatsheet for working with C++ in an embedded bare-metal environment.
 
 ### Language Flags
 
-| **Flag**          | **Description**                                                                                 | **gcc**            | **clang**          |
-| ----------------- | ----------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
-| `-std=c11`        | Set the language standard for C. Possible values: **90**, **11**, **17**                        | :heavy_check_mark: | :heavy_check_mark: |
-| `-std=c++17`      | Set the language standard for C++. Possible values: **98**, **11**, **14**, **17**, **20**      | :heavy_check_mark: | :heavy_check_mark: |
-| `-std=gnu11`      | Same as above, but with GNU extensions enabled.                                                 | :heavy_check_mark: | :heavy_check_mark: |
-| `-std=gnu++17`    | Same as above, but with GNU extensions enabled.                                                 | :heavy_check_mark: | :heavy_check_mark: |
-| `-ffreestanding`  | Enables freestanding C/C++. Default is hosted.                                                  | :heavy_check_mark: | :heavy_check_mark: |
-| `-fno-exceptions` |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
-| `-fno-builtin`    | Disable special handling and optimizations of builtin functions like `strlen()` and `malloc()`. | :heavy_check_mark: | :heavy_check_mark: |
-| `-fno-rtti`       |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
-| `-fpermissive`    |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
+| **Flag**          | **Description**                                                                            | **gcc**            | **clang**          |
+| ----------------- | ------------------------------------------------------------------------------------------ | ------------------ | ------------------ |
+| `-std=c++17`      | Set the language standard for C++. Possible values: **98**, **11**, **14**, **17**, **20** | :heavy_check_mark: | :heavy_check_mark: |
+| `-std=gnu++17`    | Same as above, but with GNU extensions enabled.                                            | :heavy_check_mark: | :heavy_check_mark: |
+| `-ffreestanding`  | Enables freestanding C/C++. Default is hosted.                                             | :heavy_check_mark: | :heavy_check_mark: |
+| `-fno-exceptions` | See [fno-exceptions](#fno-exceptions).                                                     | :heavy_check_mark: | :heavy_check_mark: |
+| `-fno-rtti`       | See [fno-rtti](#fno-rtti).                                                                 | :heavy_check_mark: | :heavy_check_mark: |
+| `-nostdinc++`     | Do not search for header files in the standard directories specific to C++.                | :heavy_check_mark: | :heavy_check_mark: |
+
+#### fno-exceptions
+
+Disable exception handling. See [GCC manual](https://gcc.gnu.org/onlinedocs/libstdc++/manual/using_exceptions.html) for more details.
+
+#### fno-rtti
+
+Disable generation of information about every class with virtual functions for use by the C++ run-time type identification features `dynamic_cast` and `typeid`. Can save space if not needed. Mixing code compiled with `-frtti` with that compiled with `-fno-rtti` may not work.
 
 ### Architecture Flags
 
@@ -114,12 +119,12 @@ Cheatsheet for working with C++ in an embedded bare-metal environment.
 
 ### Warning Flags
 
-| **Flag**     | **Description** | **gcc**            | **clang**          |
-| ------------ | --------------- | ------------------ | ------------------ |
-| `-Wall`      |                 | :heavy_check_mark: | :heavy_check_mark: |
-| `-Wextra`    |                 | :heavy_check_mark: | :heavy_check_mark: |
-| `-Wpedantic` |                 | :heavy_check_mark: | :heavy_check_mark: |
-| `-Werror`    |                 | :heavy_check_mark: | :heavy_check_mark: |
+| **Flag**     | **Description**                                              | **gcc**            | **clang**          |
+| ------------ | ------------------------------------------------------------ | ------------------ | ------------------ |
+| `-Wall`      | Basic warnings. Should always be used.                       | :heavy_check_mark: | :heavy_check_mark: |
+| `-Wextra`    | Everything from `-Wall` plus more.                           | :heavy_check_mark: | :heavy_check_mark: |
+| `-Wpedantic` | Issue all the warnings demanded by strict ISO C and ISO C++. | :heavy_check_mark: | :heavy_check_mark: |
+| `-Werror`    | Make all warnings into errors.                               | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Assembler
 
