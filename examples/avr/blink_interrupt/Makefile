@@ -1,19 +1,44 @@
+ASM  	= avr-gcc
 CC  	= avr-gcc
 CXX 	= avr-g++
+LD  	= avr-g++
+OBJCOPY = avr-objcopy
 OBJDUMP = avr-objdump
 SIZE	= avr-size
+QEMU	= qemu-system-avr
+
+BIN = bin
+FIRMWARE = ${BIN}/blink
 
 MCU = atmega328p
-CXXFLAGS = -mmcu=${MCU} --std=c++2a -O0 -ffreestanding -fno-exceptions -Wall -Wextra -Wpedantic
-CXXSRC += main.cpp
+CXXFLAGS = -mmcu=${MCU} -std=c++2a -Os -Wall -Wextra -Wpedantic
 
-firmware: main.o
-	${CXX} ${CXXFLAGS} -o $@ $^
+SRC 	+= src/main
+OBJS 	:= ${addsuffix .o, ${SRC}}
 
-main.o: main.cpp
+.PHONY: all
+all: ${BIN} ${FIRMWARE}.bin
+
+.PRECIOUS: ${FIRMWARE}.elf
+%.bin: %.elf
+	${OBJCOPY} -O binary $< $@
+
+.PRECIOUS: ${OBJS}
+%.elf: ${OBJS}
+	${LD} ${CXXFLAGS} -o $@ $^
+
+%.o: %.cpp
 	${CXX} -c ${CXXFLAGS} -o $@ $^
+
+${BIN}:
+	mkdir -p ${BIN}
+
+.PHONY: run
+run:
+	${QEMU} -machine uno -bios ${FIRMWARE}.elf
 
 .PHONY: clean
 clean:
-	rm -f firmware *.o
+	find src -type f -name '*.o' -exec rm {} +
+	rm -rf ${BIN}
 

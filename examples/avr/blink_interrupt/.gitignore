@@ -1,3 +1,4 @@
 firmware
 *.o
 *.elf
+*.bin
