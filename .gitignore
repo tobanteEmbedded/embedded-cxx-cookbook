@@ -1,0 +1,10 @@
+.atom
+.idea
+.vs
+.vscode
+
+build
+build_*
+cmake-build-*
+
+*.pdf
