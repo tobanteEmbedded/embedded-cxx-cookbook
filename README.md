@@ -1,11 +1,13 @@
 # Embedded C++ Cookbook
 
+Cheatsheet for working with C++ in an embedded bare-metal environment.
+
 - [Intro](#intro)
-- [Hosted vs. Freestanding C++](#hosted-vs-freestanding-c--)
 - [CPUs](#cpus)
   - [ARM](#arm)
   - [AVR](#avr)
   - [RISCV](#riscv)
+- [Hosted vs. Freestanding C++](#hosted-vs-freestanding-c--)
 - [Compilers](#compilers)
   - [GCC](#gcc)
   - [Clang](#clang)
@@ -27,12 +29,6 @@
 - [Examples](#examples)
 
 ## Intro
-
-## Hosted vs. Freestanding C++
-
-- Headers
-- Exceptions
-- RTTI
 
 ## CPUs
 
@@ -57,6 +53,12 @@
 
 - 32 Bit
 - Open Source ISA
+
+## Hosted vs. Freestanding C++
+
+- Headers
+- Exceptions
+- RTTI
 
 ## Compilers
 
@@ -132,6 +134,8 @@
 
 ## Build System
 
+### Platform IO
+
 ### Makefile
 
 ### CMake
@@ -139,7 +143,7 @@
 ## Libraries
 
 - STL
-- STL like
+- STL-like
 - Boost
 
 ## IDE
@@ -154,3 +158,5 @@
 - SWD (STM)
 
 ## Examples
+
+See the [examples](./examples) folder for some projects.

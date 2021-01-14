@@ -1,4 +1,4 @@
-firmware
+bin
 *.o
 *.elf
 *.bin
