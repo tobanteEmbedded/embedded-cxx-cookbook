@@ -61,10 +61,14 @@
 
 ### Common Flags
 
-| **Flag**       | **Description**                                                                             | **gcc**            | **clang**          |
-| -------------- | ------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
-| -ffreestanding | Enables freestanding C/C++. Default is hosted.                                              | :heavy_check_mark: | :heavy_check_mark: |
-| -fno-builtin   | Disable special handling and optimizations of builtin functions like strlen() and malloc(). | :heavy_check_mark: | :heavy_check_mark: |
+| **Flag**                | **Description**                                                                                 | **gcc**            | **clang**          |
+| ----------------------- | ----------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
+| -ffreestanding          | Enables freestanding C/C++. Default is hosted.                                                  | :heavy_check_mark: | :heavy_check_mark: |
+| -fno-exceptions         |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
+| -fno-builtin            | Disable special handling and optimizations of builtin functions like `strlen()` and `malloc()`. | :heavy_check_mark: | :heavy_check_mark: |
+| -fno-rtti               |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
+| -fno-threadsafe-statics |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
+| -fpermissive            |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
 
 ### Warning Flags
 
@@ -74,6 +78,15 @@
 | -Wextra    |                 | :heavy_check_mark: | :heavy_check_mark: |
 | -Wpedantic |                 | :heavy_check_mark: | :heavy_check_mark: |
 | -Werror    |                 | :heavy_check_mark: | :heavy_check_mark: |
+
+### Linker Flags
+
+| **Flag**               | **Description** | **gcc**            | **clang**          |
+| ---------------------- | --------------- | ------------------ | ------------------ |
+| -Tpath/to/linkerscript |                 | :heavy_check_mark: | :heavy_check_mark: |
+| -fstack-usage          |                 | :heavy_check_mark: | :white_check_mark: |
+| --print-memory-usage   |                 | :heavy_check_mark: | :white_check_mark: |
+| -static                |                 | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Build System
 
