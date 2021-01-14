@@ -10,9 +10,12 @@
   - [AVR](#avr)
   - [RISCV](#riscv)
 - [Compilers](#compilers)
-  - [gcc](#gcc)
-  - [clang](#clang)
+  - [GCC](#gcc)
+  - [Clang](#clang)
   - [Common Flags](#common-flags)
+  - [Architecure Flags](#architecure-flags)
+  - [Optimization Flags](#optimization-flags)
+  - [Debug Flags](#debug-flags)
   - [Warning Flags](#warning-flags)
 - [Assembler](#assembler)
   - [Assembler Flags](#assembler-flags)
@@ -61,9 +64,9 @@
 
 ## Compilers
 
-### gcc
+### GCC
 
-### clang
+### Clang
 
 ### Common Flags
 
@@ -75,6 +78,30 @@
 | `-fno-rtti`               |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
 | `-fno-threadsafe-statics` |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
 | `-fpermissive`            |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
+
+### Architecure Flags
+
+| **Flag**      | **Description** | **gcc**            | **clang**          |
+| ------------- | --------------- | ------------------ | ------------------ |
+| `-mpcu=`      |                 | :heavy_check_mark: | :heavy_check_mark: |
+| `-mthumb`     |                 | :heavy_check_mark: | :heavy_check_mark: |
+| `-mfloat-abi` |                 | :heavy_check_mark: | :heavy_check_mark: |
+
+### Optimization Flags
+
+| **Flag**            | **Description**                                                         | **gcc**            | **clang**          |
+| ------------------- | ----------------------------------------------------------------------- | ------------------ | ------------------ |
+| `-O`                | Sets optimization level. Possible values: `0,1,2,3,s,g` & `z` on clang. | :heavy_check_mark: | :heavy_check_mark: |
+| `-flto`             | Enables link time optimization.                                         | :heavy_check_mark: | :heavy_check_mark: |
+| `-fno-unroll-loops` | Disable loop unrolling. Can save space.                                 | :heavy_check_mark: | :heavy_check_mark: |
+
+### Debug Flags
+
+| **Flag** | **Description**                                                                           | **gcc**            | **clang**          |
+| -------- | ----------------------------------------------------------------------------------------- | ------------------ | ------------------ |
+| `-Og`    | Enable optimzation level which is tuned for best debuggability while still performing OK. | :heavy_check_mark: | :heavy_check_mark: |
+| `-g`     | Include debug symbols.                                                                    | :heavy_check_mark: | :heavy_check_mark: |
+| `-ggdb`  |                                                                                           | :heavy_check_mark: | :heavy_check_mark: |
 
 ### Warning Flags
 
