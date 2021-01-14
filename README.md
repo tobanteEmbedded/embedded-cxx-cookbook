@@ -4,9 +4,9 @@
 - [Hosted vs. Freestanding C++](#hosted-vs-freestanding-c--)
 - [CPUs](#cpus)
   - [ARM](#arm)
-  - [M0/M0+](#m0-m0-)
-  - [M3](#m3)
-  - [M4](#m4)
+    - [M0/M0+](#m0-m0-)
+    - [M3](#m3)
+    - [M4](#m4)
   - [AVR](#avr)
   - [RISCV](#riscv)
 - [Compilers](#compilers)
@@ -37,11 +37,11 @@
 - 32 Bit
 - Cortex Series
 
-### M0/M0+
+#### M0/M0+
 
-### M3
+#### M3
 
-### M4
+#### M4
 
 ### AVR
 
