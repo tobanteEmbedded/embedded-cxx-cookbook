@@ -37,12 +37,16 @@ Cheatsheet for working with C++ in an embedded bare-metal environment.
 ### ARM
 
 - 32 Bit
-- Cortex Series
+- Cortex-M Series
 
-| **Feature** | **M0/M0+**   | **M3**           | **M4**           |
-| ----------- | ------------ | ---------------- | ---------------- |
-| Interrupts  | 1-32         | 1-240            | 1-240            |
-| STM Series  | STM32 L0, G0 | STM32 F1, F2, L1 | STM32 F3, F4, L4 |
+| **Feature**             | **M0/M0+** | **M3**     | **M4**                        | **M7**                        |
+| ----------------------- | ---------- | ---------- | ----------------------------- | ----------------------------- |
+| Microarchitecture       | ARMv6-M    | ARMv7-M    | ARMv7E-M                      | ARMv7E-M                      |
+| Frequency               | 32-64 Mhz  | 24-120 Mhz | 48-180 Mhz                    | 200-600 Mhz                   |
+| Interrupts              | 1-32       | 1-240      | 1-240                         | 1-240                         |
+| Floating Point (single) | :x:        | :x:        | :heavy_check_mark: (optional) | :heavy_check_mark: (optional) |
+| Floating Point (double) | :x:        | :x:        | :x:                           | :heavy_check_mark: (optional) |
+| STM Series              | L0, G0     | F1, F2, L1 | F3, F4, L4                    | F7, H7                        |
 
 ### AVR
 
