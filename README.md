@@ -55,14 +55,25 @@
 
 ## Compilers
 
+### gcc
+
+### clang
+
+### Common Flags
+
 | **Flag**       | **Description**                                                                             | **gcc**            | **clang**          |
 | -------------- | ------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
 | -ffreestanding | Enables freestanding C/C++. Default is hosted.                                              | :heavy_check_mark: | :heavy_check_mark: |
 | -fno-builtin   | Disable special handling and optimizations of builtin functions like strlen() and malloc(). | :heavy_check_mark: | :heavy_check_mark: |
 
-### gcc
+### Warning Flags
 
-### clang
+| **Flag**   | **Description** | **gcc**            | **clang**          |
+| ---------- | --------------- | ------------------ | ------------------ |
+| -Wall      |                 | :heavy_check_mark: | :heavy_check_mark: |
+| -Wextra    |                 | :heavy_check_mark: | :heavy_check_mark: |
+| -Wpedantic |                 | :heavy_check_mark: | :heavy_check_mark: |
+| -Werror    |                 | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Build System
 
