@@ -61,32 +61,42 @@
 
 ### Common Flags
 
-| **Flag**                | **Description**                                                                                 | **gcc**            | **clang**          |
-| ----------------------- | ----------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
-| -ffreestanding          | Enables freestanding C/C++. Default is hosted.                                                  | :heavy_check_mark: | :heavy_check_mark: |
-| -fno-exceptions         |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
-| -fno-builtin            | Disable special handling and optimizations of builtin functions like `strlen()` and `malloc()`. | :heavy_check_mark: | :heavy_check_mark: |
-| -fno-rtti               |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
-| -fno-threadsafe-statics |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
-| -fpermissive            |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
+| **Flag**                  | **Description**                                                                                 | **gcc**            | **clang**          |
+| ------------------------- | ----------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
+| `-ffreestanding`          | Enables freestanding C/C++. Default is hosted.                                                  | :heavy_check_mark: | :heavy_check_mark: |
+| `-fno-exceptions`         |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
+| `-fno-builtin`            | Disable special handling and optimizations of builtin functions like `strlen()` and `malloc()`. | :heavy_check_mark: | :heavy_check_mark: |
+| `-fno-rtti`               |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
+| `-fno-threadsafe-statics` |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
+| `-fpermissive`            |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
 
 ### Warning Flags
 
-| **Flag**   | **Description** | **gcc**            | **clang**          |
-| ---------- | --------------- | ------------------ | ------------------ |
-| -Wall      |                 | :heavy_check_mark: | :heavy_check_mark: |
-| -Wextra    |                 | :heavy_check_mark: | :heavy_check_mark: |
-| -Wpedantic |                 | :heavy_check_mark: | :heavy_check_mark: |
-| -Werror    |                 | :heavy_check_mark: | :heavy_check_mark: |
+| **Flag**     | **Description** | **gcc**            | **clang**          |
+| ------------ | --------------- | ------------------ | ------------------ |
+| `-Wall`      |                 | :heavy_check_mark: | :heavy_check_mark: |
+| `-Wextra`    |                 | :heavy_check_mark: | :heavy_check_mark: |
+| `-Wpedantic` |                 | :heavy_check_mark: | :heavy_check_mark: |
+| `-Werror`    |                 | :heavy_check_mark: | :heavy_check_mark: |
+
+## Assembler
+
+### Assembler Flags
+
+| **Flag** | **Description** | **gcc**            | **clang**          |
+| -------- | --------------- | ------------------ | ------------------ |
+|          |                 | :heavy_check_mark: | :heavy_check_mark: |
+
+## Linker
 
 ### Linker Flags
 
-| **Flag**               | **Description** | **gcc**            | **clang**          |
-| ---------------------- | --------------- | ------------------ | ------------------ |
-| -Tpath/to/linkerscript |                 | :heavy_check_mark: | :heavy_check_mark: |
-| -fstack-usage          |                 | :heavy_check_mark: | :x:                |
-| --print-memory-usage   |                 | :heavy_check_mark: | :x:                |
-| -static                |                 | :heavy_check_mark: | :heavy_check_mark: |
+| **Flag**                 | **Description** | **gcc**            | **clang**          |
+| ------------------------ | --------------- | ------------------ | ------------------ |
+| `-Tpath/to/linkerscript` |                 | :heavy_check_mark: | :heavy_check_mark: |
+| `-fstack-usage`          |                 | :heavy_check_mark: | :x:                |
+| `--print-memory-usage`   |                 | :heavy_check_mark: | :x:                |
+| `-static`                |                 | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Build System
 
