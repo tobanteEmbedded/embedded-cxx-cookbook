@@ -55,6 +55,11 @@
 
 ## Compilers
 
+| **Flag**          | **Description** | **gcc**            | **clang**          |
+| ----------------- | --------------- | ------------------ | ------------------ |
+| -ffreestanding    |                 | :heavy_check_mark: | :heavy_check_mark: |
+| -fno-unroll-loops |                 | :heavy_check_mark: | :heavy_check_mark: |
+
 ### gcc
 
 ### clang
