@@ -16,8 +16,8 @@ set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
 set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
 
-set(CPU_FLAGS " -mmcu=atmega328p")
-set(COMPILER_FLAGS " -ffreestanding")
+set(CPU_FLAGS "-mmcu=atmega328p")
+set(COMPILER_FLAGS "-ffreestanding")
 
 # general
 set(CMAKE_ASM_FLAGS         "${CPU_FLAGS} -x assembler-with-cpp -Wno-comment" CACHE INTERNAL "")
@@ -26,13 +26,13 @@ set(CMAKE_CXX_FLAGS         "${CPU_FLAGS} ${COMPILER_FLAGS}"                  CA
 set(CMAKE_EXE_LINKER_FLAGS  "${CPU_FLAGS}"                                    CACHE INTERNAL "")
 
 # debug only
-set(CMAKE_ASM_FLAGS_DEBUG           "-g"                                CACHE INTERNAL "")
-set(CMAKE_C_FLAGS_DEBUG             "${CMAKE_C_FLAGS} -Og -g -DDEBUG"   CACHE INTERNAL "")
-set(CMAKE_CXX_FLAGS_DEBUG           "${CMAKE_CXX_FLAGS} -Og -g -DDEBUG" CACHE INTERNAL "")
-set(CMAKE_EXE_LINKER_FLAGS_DEBUG    "${CMAKE_EXE_LINKER_FLAGS}"         CACHE INTERNAL "")
+set(CMAKE_ASM_FLAGS_DEBUG           "-g"                CACHE INTERNAL "")
+set(CMAKE_C_FLAGS_DEBUG             "-Og -g -DDEBUG"    CACHE INTERNAL "")
+set(CMAKE_CXX_FLAGS_DEBUG           "-Og -g -DDEBUG"    CACHE INTERNAL "")
+set(CMAKE_EXE_LINKER_FLAGS_DEBUG    ""                  CACHE INTERNAL "")
 
 # release only
-set(CMAKE_ASM_FLAGS_RELEASE         ""                                  CACHE INTERNAL "")
-set(CMAKE_C_FLAGS_RELEASE           "${CMAKE_C_FLAGS}  -Os -DNDEBUG "   CACHE INTERNAL "")
-set(CMAKE_CXX_FLAGS_RELEASE         "${CMAKE_CXX_FLAGS} -Os -DNDEBUG "  CACHE INTERNAL "")
-set(CMAKE_EXE_LINKER_FLAGS_RELEASE  "${CMAKE_EXE_LINKER_FLAGS}"         CACHE INTERNAL "")
+set(CMAKE_ASM_FLAGS_RELEASE         ""                  CACHE INTERNAL "")
+set(CMAKE_C_FLAGS_RELEASE           "-Os -DNDEBUG "     CACHE INTERNAL "")
+set(CMAKE_CXX_FLAGS_RELEASE         "-Os -DNDEBUG "     CACHE INTERNAL "")
+set(CMAKE_EXE_LINKER_FLAGS_RELEASE  ""                  CACHE INTERNAL "")
