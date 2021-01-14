@@ -10,7 +10,7 @@
   - [GCC](#gcc)
   - [Clang](#clang)
   - [Language Flags](#language-flags)
-  - [Architecure Flags](#architecure-flags)
+  - [Architecture Flags](#architecture-flags)
   - [Optimization Flags](#optimization-flags)
   - [Debug Flags](#debug-flags)
   - [Warning Flags](#warning-flags)
@@ -78,7 +78,7 @@
 | `-fno-rtti`       |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
 | `-fpermissive`    |                                                                                                 | :heavy_check_mark: | :heavy_check_mark: |
 
-### Architecure Flags
+### Architecture Flags
 
 | **Flag**      | **Description** | **gcc**            | **clang**          |
 | ------------- | --------------- | ------------------ | ------------------ |
