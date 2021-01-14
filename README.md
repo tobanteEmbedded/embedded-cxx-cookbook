@@ -43,9 +43,10 @@
 - 32 Bit
 - Cortex Series
 
-| **Feature** | **M0/M0+**         | **M3**             | **M4**             |
-| ----------- | ------------------ | ------------------ | ------------------ |
-|             | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| **Feature** | **M0/M0+**   | **M3**           | **M4**           |
+| ----------- | ------------ | ---------------- | ---------------- |
+| Interrupts  | 1-32         | 1-240            | 1-240            |
+| STM Series  | STM32 L0, G0 | STM32 F1, F2, L1 | STM32 F3, F4, L4 |
 
 ### AVR
 
@@ -67,8 +68,8 @@
 
 | **Flag**          | **Description**                                                                                 | **gcc**            | **clang**          |
 | ----------------- | ----------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
-| `-std=c11`        | Set the language standard for C. Possible values: **90**,**11**,**17**                          | :heavy_check_mark: | :heavy_check_mark: |
-| `-std=c++17`      | Set the language standard for C++. Possible values: **98**,**11**,**14**,**17**,**20**          | :heavy_check_mark: | :heavy_check_mark: |
+| `-std=c11`        | Set the language standard for C. Possible values: **90**, **11**, **17**                        | :heavy_check_mark: | :heavy_check_mark: |
+| `-std=c++17`      | Set the language standard for C++. Possible values: **98**, **11**, **14**, **17**, **20**      | :heavy_check_mark: | :heavy_check_mark: |
 | `-std=gnu11`      | Same as above, but with GNU extensions enabled.                                                 | :heavy_check_mark: | :heavy_check_mark: |
 | `-std=gnu++17`    | Same as above, but with GNU extensions enabled.                                                 | :heavy_check_mark: | :heavy_check_mark: |
 | `-ffreestanding`  | Enables freestanding C/C++. Default is hosted.                                                  | :heavy_check_mark: | :heavy_check_mark: |
