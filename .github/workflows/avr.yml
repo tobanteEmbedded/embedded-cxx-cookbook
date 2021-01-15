@@ -10,14 +10,17 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    container:
+      image: tobante/avr-gcc:9.2
     steps:
       - name: Check out code
         uses: actions/checkout@v2
 
-      - name: Use avr-gcc docker image
-        uses: docker://tobante/avr-gcc:9.2
+      - name: Build blink_interrupt project
+        run: make -C examples/avr/blink_interrupt
+
+      - name: Build blink_cmake project
         run: |
-          make -C examples/avr/blink_interrupt
           cd examples/avr/blink_cmake
           cmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain.cmake
           cmake --build build
