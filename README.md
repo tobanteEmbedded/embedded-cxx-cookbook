@@ -178,8 +178,16 @@ Disable generation of information about every class with virtual functions for u
 
 ## Debugging
 
-- JTAG
-- SWD (STM)
+### JTAG / SWD
+
+### GDB
+
+### QEMU
+
+```sh
+# Launches QEMU as an Arduino Uno and printing USART to stdio.
+qemu-system-avr -machine uno -bios firmware.elf -serial mon:stdio -nographic
+```
 
 ## Examples
 
