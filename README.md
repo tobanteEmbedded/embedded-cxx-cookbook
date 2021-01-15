@@ -141,9 +141,9 @@ Disable generation of information about every class with virtual functions for u
 
 ### Assembler Flags
 
-| **Flag**                | **Description**                                  | **gcc**            | **clang**          |
-| ----------------------- | ------------------------------------------------ | ------------------ | ------------------ |
-| `-x assembler-with-cpp` | Enables the C++ preprocessor for assembly files. | :heavy_check_mark: | :heavy_check_mark: |
+| **Flag**                | **Description**                                | **gcc**            | **clang**          |
+| ----------------------- | ---------------------------------------------- | ------------------ | ------------------ |
+| `-x assembler-with-cpp` | Enables the C preprocessor for assembly files. | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Linker
 
