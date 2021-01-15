@@ -17,11 +17,14 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
 
-      - name: Goto blink_interrupt project
-        run: cd examples/avr/blink_interrupt
+      - name: Build blink_interrupt project
+        run: make -C examples/avr/blink_interrupt
 
-      - name: Check directory
-        run: pwd && ls -la
-
-      - name: Build blink_interrupt
-        run: make all
+      - name: Build blink_cmake project
+        run: |
+          cd examples/avr/blink_cmake
+          cmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain.cmake
+          cmake --build build
+          rm -rf build
+          cmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain.cmake
+          cmake --build build
