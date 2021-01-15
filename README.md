@@ -5,7 +5,9 @@ Cheatsheet for working with C++ in an embedded bare-metal environment.
 - [Intro](#intro)
 - [CPUs](#cpus)
   - [ARM](#arm)
+    - [ARM Architecture Flags](#arm-architecture-flags)
   - [AVR](#avr)
+    - [AVR Architecture Flags](#avr-architecture-flags)
   - [RISCV](#riscv)
 - [Hosted vs. Freestanding](#hosted-vs-freestanding)
 - [Compilers](#compilers)
@@ -14,7 +16,6 @@ Cheatsheet for working with C++ in an embedded bare-metal environment.
   - [Language Flags](#language-flags)
     - [fno-exceptions](#fno-exceptions)
     - [fno-rtti](#fno-rtti)
-  - [Architecture Flags](#architecture-flags)
   - [Optimization Flags](#optimization-flags)
   - [Debug Flags](#debug-flags)
   - [Warning Flags](#warning-flags)
@@ -23,7 +24,6 @@ Cheatsheet for working with C++ in an embedded bare-metal environment.
 - [Linker](#linker)
   - [Linker Flags](#linker-flags)
 - [Build System](#build-system)
-  - [Platform IO](#platform-io)
   - [Makefile](#makefile)
   - [CMake](#cmake)
 - [Libraries](#libraries)
@@ -55,10 +55,24 @@ Cheatsheet for working with C++ in an embedded bare-metal environment.
 | Floating Point (double) | :x:          | :x:            | :x:                           | :heavy_check_mark: (optional) |
 | STM Series              | L0, G0       | F1, F2, L1     | F3, F4, L4                    | F7, H7                        |
 
+#### ARM Architecture Flags
+
+| **Flag**      | **Description** | **gcc**            | **clang**          |
+| ------------- | --------------- | ------------------ | ------------------ |
+| `-mcpu=`      |                 | :heavy_check_mark: | :heavy_check_mark: |
+| `-mthumb`     |                 | :heavy_check_mark: | :heavy_check_mark: |
+| `-mfloat-abi` |                 | :heavy_check_mark: | :heavy_check_mark: |
+
 ### AVR
 
 - 8 Bit
 - Arduino
+
+#### AVR Architecture Flags
+
+| **Flag** | **Description**                                                                                                 | **gcc**            | **clang**          |
+| -------- | --------------------------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
+| `-mmcu=` | Possible values: **atmega328p** and more. See [GCC manual](https://gcc.gnu.org/onlinedocs/gcc/AVR-Options.html) | :heavy_check_mark: | :heavy_check_mark: |
 
 ### RISCV
 
@@ -95,15 +109,6 @@ Disable exception handling. See [GCC manual](https://gcc.gnu.org/onlinedocs/libs
 #### fno-rtti
 
 Disable generation of information about every class with virtual functions for use by the C++ run-time type identification features `dynamic_cast` and `typeid`. Can save space if not needed. Mixing code compiled with `-frtti` with that compiled with `-fno-rtti` may not work.
-
-### Architecture Flags
-
-| **Flag**      | **Description** | **gcc**            | **clang**          |
-| ------------- | --------------- | ------------------ | ------------------ |
-| `-mmcu=`      |                 | :heavy_check_mark: | :heavy_check_mark: |
-| `-mcpu=`      |                 | :heavy_check_mark: | :heavy_check_mark: |
-| `-mthumb`     |                 | :heavy_check_mark: | :heavy_check_mark: |
-| `-mfloat-abi` |                 | :heavy_check_mark: | :heavy_check_mark: |
 
 ### Optimization Flags
 
