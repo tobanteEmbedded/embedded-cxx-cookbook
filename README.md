@@ -7,7 +7,7 @@ Cheatsheet for working with C++ in an embedded bare-metal environment.
   - [ARM](#arm)
   - [AVR](#avr)
   - [RISCV](#riscv)
-- [Hosted vs. Freestanding C++](#hosted-vs-freestanding-c--)
+- [Hosted vs. Freestanding](#hosted-vs-freestanding)
 - [Compilers](#compilers)
   - [GCC](#gcc)
   - [Clang](#clang)
@@ -65,7 +65,7 @@ Cheatsheet for working with C++ in an embedded bare-metal environment.
 - 32 Bit
 - Open Source ISA
 
-## Hosted vs. Freestanding C++
+## Hosted vs. Freestanding
 
 - Headers
 - Exceptions
@@ -134,9 +134,9 @@ Disable generation of information about every class with virtual functions for u
 
 ### Assembler Flags
 
-| **Flag**                | **Description**                                                                                     | **gcc**            | **clang**          |
-| ----------------------- | --------------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
-| `-x assembler-with-cpp` | Indicates that the assembly contains C++ directives and the compiler must run the C++ preprocessor. | :heavy_check_mark: | :heavy_check_mark: |
+| **Flag**                | **Description**                                  | **gcc**            | **clang**          |
+| ----------------------- | ------------------------------------------------ | ------------------ | ------------------ |
+| `-x assembler-with-cpp` | Enables the C++ preprocessor for assembly files. | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Linker
 
@@ -152,8 +152,6 @@ Disable generation of information about every class with virtual functions for u
 | `-static`                |                                           | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Build System
-
-### Platform IO
 
 ### Makefile
 
