@@ -20,5 +20,8 @@ jobs:
       - name: Goto blink_interrupt project
         run: cd examples/avr/blink_interrupt
 
+      - name: Check directory
+        run: pwd && ls -la
+
       - name: Build blink_interrupt
         run: make all
