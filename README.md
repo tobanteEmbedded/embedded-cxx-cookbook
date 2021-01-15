@@ -29,6 +29,9 @@ Cheatsheet for working with C++ in an embedded bare-metal environment.
 - [Libraries](#libraries)
 - [IDE](#ide)
 - [Debugging](#debugging)
+  - [JTAG / SWD](#jtag---swd)
+  - [GDB](#gdb)
+  - [QEMU](#qemu)
 - [Examples](#examples)
 
 ## Intro
@@ -191,4 +194,4 @@ qemu-system-avr -machine uno -bios firmware.elf -serial mon:stdio -nographic
 
 ## Examples
 
-See the [examples](./examples) folder for some projects.
+The [examples](./examples) folder contains some basic Makefile & CMake based projects.
