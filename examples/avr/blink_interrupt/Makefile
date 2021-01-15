@@ -11,7 +11,7 @@ BIN = bin
 FIRMWARE = ${BIN}/blink
 
 MCU = atmega328p
-CXXFLAGS = -mmcu=${MCU} -std=c++2a -Os -Wall -Wextra -Wpedantic
+CXXFLAGS = -mmcu=${MCU} -std=c++17 -Os -Wall -Wextra -Wpedantic
 
 SRC 	+= src/main
 OBJS 	:= ${addsuffix .o, ${SRC}}
