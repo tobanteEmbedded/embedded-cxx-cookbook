@@ -1,0 +1,24 @@
+name: AVR
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use avr-gcc docker image
+        uses: docker://tobante/avr-gcc:9.2
+
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Goto blink_interrupt project
+        run: cd examples/avr/blink_interrupt
+
+      - name: Build blink_interrupt
+        run: make all
