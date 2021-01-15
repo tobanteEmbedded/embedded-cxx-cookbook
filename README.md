@@ -100,7 +100,8 @@ Disable generation of information about every class with virtual functions for u
 
 | **Flag**      | **Description** | **gcc**            | **clang**          |
 | ------------- | --------------- | ------------------ | ------------------ |
-| `-mpcu=`      |                 | :heavy_check_mark: | :heavy_check_mark: |
+| `-mmcu=`      |                 | :heavy_check_mark: | :heavy_check_mark: |
+| `-mcpu=`      |                 | :heavy_check_mark: | :heavy_check_mark: |
 | `-mthumb`     |                 | :heavy_check_mark: | :heavy_check_mark: |
 | `-mfloat-abi` |                 | :heavy_check_mark: | :heavy_check_mark: |
 
@@ -133,20 +134,22 @@ Disable generation of information about every class with virtual functions for u
 
 ### Assembler Flags
 
-| **Flag** | **Description** | **gcc**            | **clang**          |
-| -------- | --------------- | ------------------ | ------------------ |
-|          |                 | :heavy_check_mark: | :heavy_check_mark: |
+| **Flag**                | **Description**                                                                                     | **gcc**            | **clang**          |
+| ----------------------- | --------------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
+| `-x assembler-with-cpp` | Indicates that the assembly contains C++ directives and the compiler must run the C++ preprocessor. | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Linker
 
 ### Linker Flags
 
-| **Flag**                 | **Description** | **gcc**            | **clang**          |
-| ------------------------ | --------------- | ------------------ | ------------------ |
-| `-Tpath/to/linkerscript` |                 | :heavy_check_mark: | :heavy_check_mark: |
-| `-fstack-usage`          |                 | :heavy_check_mark: | :x:                |
-| `--print-memory-usage`   |                 | :heavy_check_mark: | :x:                |
-| `-static`                |                 | :heavy_check_mark: | :heavy_check_mark: |
+> When using g++ or clang++ as the linker frontend prefix all flags with -Wl. Example: -Wl,--no-undefined
+
+| **Flag**                 | **Description**                           | **gcc**            | **clang**          |
+| ------------------------ | ----------------------------------------- | ------------------ | ------------------ |
+| `-Tpath/to/linkerscript` | Path to the location of the linker script | :heavy_check_mark: | :heavy_check_mark: |
+| `-fstack-usage`          |                                           | :heavy_check_mark: | :x:                |
+| `--print-memory-usage`   |                                           | :heavy_check_mark: | :x:                |
+| `-static`                |                                           | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Build System
 
