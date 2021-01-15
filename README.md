@@ -57,11 +57,13 @@ Cheatsheet for working with C++ in an embedded bare-metal environment.
 
 #### ARM Architecture Flags
 
-| **Flag**      | **Description** | **gcc**            | **clang**          |
-| ------------- | --------------- | ------------------ | ------------------ |
-| `-mcpu=`      |                 | :heavy_check_mark: | :heavy_check_mark: |
-| `-mthumb`     |                 | :heavy_check_mark: | :heavy_check_mark: |
-| `-mfloat-abi` |                 | :heavy_check_mark: | :heavy_check_mark: |
+For the complete list see: [GCC manual](https://gcc.gnu.org/onlinedocs/gcc/ARM-Options.html)
+
+| **Flag**      | **Description**                                      | **gcc**            | **clang**          |
+| ------------- | ---------------------------------------------------- | ------------------ | ------------------ |
+| `-mcpu=`      | This specifies the name of the target ARM processor. | :heavy_check_mark: | :heavy_check_mark: |
+| `-mthumb`     | Use thumb instructions.                              | :heavy_check_mark: | :heavy_check_mark: |
+| `-mfloat-abi` | Specifies which floating-point ABI to use.           | :heavy_check_mark: | :heavy_check_mark: |
 
 ### AVR
 
@@ -70,9 +72,9 @@ Cheatsheet for working with C++ in an embedded bare-metal environment.
 
 #### AVR Architecture Flags
 
-| **Flag** | **Description**                                                                                                 | **gcc**            | **clang**          |
-| -------- | --------------------------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
-| `-mmcu=` | Possible values: **atmega328p** and more. See [GCC manual](https://gcc.gnu.org/onlinedocs/gcc/AVR-Options.html) | :heavy_check_mark: | :heavy_check_mark: |
+| **Flag** | **Description**                                                                            | **gcc**            | **clang**          |
+| -------- | ------------------------------------------------------------------------------------------ | ------------------ | ------------------ |
+| `-mmcu=` | Select the MCU chip. See [GCC manual](https://gcc.gnu.org/onlinedocs/gcc/AVR-Options.html) | :heavy_check_mark: | :heavy_check_mark: |
 
 ### RISCV
 
