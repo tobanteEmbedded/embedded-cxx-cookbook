@@ -1,5 +1,7 @@
 # Embedded C++ Cookbook
 
+![AVR](https://github.com/tobiashienzsch/embedded-cxx-cookbook/workflows/AVR/badge.svg)
+
 Cheatsheet for working with C++ in an embedded bare-metal environment.
 
 - [Intro](#intro)
