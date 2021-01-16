@@ -11,7 +11,7 @@ BIN = bin
 MCU = atmega328p
 FIRMWARE = ${BIN}/${MCU}_uart
 
-CXXFLAGS = -mmcu=${MCU} -std=c++17 -Os -Wall -Wextra -Wpedantic
+CXXFLAGS = -mmcu=${MCU} -std=c++17 -Os -flto -Wall -Wextra -Wpedantic
 
 SRC 	+= src/main
 OBJS 	:= ${addsuffix .o, ${SRC}}
