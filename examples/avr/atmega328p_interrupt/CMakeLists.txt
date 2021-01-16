@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.15)
 
 # Give your project a name and enable assembly, C
 # and C++ as the languages used.
-project(blink_cmake ASM C CXX)
+project(atmega328p_interrupt ASM C CXX)
 
 # Only do these if this is the main project,
 # and not if it is included through add_subdirectory.
