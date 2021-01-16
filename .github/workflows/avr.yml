@@ -16,12 +16,12 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
 
-      - name: Build blink_interrupt project
-        run: make -C examples/avr/blink_interrupt
+      - name: Build atmega328p_uart project
+        run: make -C examples/avr/atmega328p_uart
 
-      - name: Build blink_cmake project
+      - name: Build atmega328p_interrupt project
         run: |
-          cd examples/avr/blink_cmake
+          cd examples/avr/atmega328p_interrupt
           cmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain.cmake
           cmake --build build
           rm -rf build
