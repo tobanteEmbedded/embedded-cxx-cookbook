@@ -26,6 +26,7 @@ Cheatsheet for working with C++ in an embedded bare-metal environment.
 - [Linker](#linker)
   - [Linker Flags](#linker-flags)
 - [Build System](#build-system)
+  - [Makefile vs. CMake](#makefile-vs-cmake)
   - [Makefile](#makefile)
   - [CMake](#cmake)
 - [Libraries](#libraries)
@@ -164,6 +165,21 @@ Disable generation of information about every class with virtual functions for u
 | `-static`                |                                           | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Build System
+
+In this section will take a detailed look at a couple of build system, that can be used for embedded bare-metal development. The two most common right now are **Makefile** or **CMake** projects, so let's start with those.
+
+### Makefile vs. CMake
+
+First a **quick** comparison:
+| **Makefile** | **CMake** |
+| ----------------------------------------------------------- | ---------------------------------------------------------------- |
+| Easy intial setup | The first CMake toolchain file can be a little tricky. |
+| Portable across Unix-like development hosts | Portable across all development hosts (Linux,macOS,Unix,Windows) |
+| Clear output showing the set flags & options | Default output does not show direct compiler invokation |
+| | Easy managment of multiple executables & libraries (shared code) |
+| | Combine host tests with device code in same project |
+| Some IDE support | Supported by many IDEs and editors |
+| Generate `compile-commands.json` via the `bear` cli utility | Generate `compile-commands.json` directly with CMake |
 
 ### Makefile
 
