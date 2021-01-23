@@ -1,0 +1,67 @@
+# markdown-spellcheck spelling configuration file
+# Format - lines beginning # are comments
+# global dictionary is at the start, file overrides afterwards
+# one word per line, to define a file override use ' - filename'
+# where filename is relative to this configuration file
+AVR
+RISCV
+CMake
+JTAG
+SWD
+GDB
+QEMU
+heavy_check_mark
+gcc
+ABI
+Arduino
+MCU
+ISA
+RTTI
+freestanding
+debuggability
+toolchain
+macOS
+cli
+STL
+CLion
+ - README.md
+fno-exceptions
+fno-rtti
+M0
+M3
+M4
+M7
+ARMv6-M
+ARMv7-M
+ARMv7E-M
+1-32
+1-240
+32-64
+Mhz
+24-120
+48-180
+200-600
+8-256
+16-1024
+16-2048
+64-2048
+2-36
+4-128
+16-640
+128-1024
+L0
+G0
+F1
+F2
+L1
+F3
+F4
+L4
+F7
+H7
+98
+11
+14
+17
+20
+Wl

@@ -48,7 +48,7 @@ Cheatsheet for working with C++ in an embedded bare-metal environment.
 - 32 Bit
 - Cortex-M Series
 
-> Numbers for Frequency, Flash & RAM where taken from the STM product lineup. Others manufakturers may vary, but will probably have a similar offering.
+> Numbers for Frequency, Flash & RAM where taken from the STM product lineup. Others manufacturers may vary, but will probably have a similar offering.
 
 | **Feature**             | **M0/M0+**   | **M3**         | **M4**                        | **M7**                        |
 | ----------------------- | ------------ | -------------- | ----------------------------- | ----------------------------- |
@@ -130,7 +130,7 @@ Disable generation of information about every class with virtual functions for u
 
 | **Flag** | **Description**                                                                           | **gcc**            | **clang**          |
 | -------- | ----------------------------------------------------------------------------------------- | ------------------ | ------------------ |
-| `-Og`    | Enable optimzation level which is tuned for best debuggability while still performing OK. | :heavy_check_mark: | :heavy_check_mark: |
+| `-Og`    | Enable optimization level which is tuned for best debuggability while still performing OK. | :heavy_check_mark: | :heavy_check_mark: |
 | `-g`     | Include debug symbols.                                                                    | :heavy_check_mark: | :heavy_check_mark: |
 | `-ggdb`  |                                                                                           | :heavy_check_mark: | :heavy_check_mark: |
 
@@ -155,7 +155,7 @@ Disable generation of information about every class with virtual functions for u
 
 ### Linker Flags
 
-> When using g++ or clang++ as the linker frontend prefix all flags with -Wl. Example: -Wl,--no-undefined
+> When using g++ or clang++ as the linker front end prefix all flags with -Wl. Example: -Wl,--no-undefined
 
 | **Flag**                 | **Description**                           | **gcc**            | **clang**          |
 | ------------------------ | ----------------------------------------- | ------------------ | ------------------ |
@@ -173,10 +173,10 @@ In this section will take a detailed look at a couple of build system, that can 
 First a **quick** comparison:
 | **Makefile** | **CMake** |
 | ----------------------------------------------------------- | ---------------------------------------------------------------- |
-| Easy intial setup | The first CMake toolchain file can be a little tricky. |
+| Easy initial setup | The first CMake toolchain file can be a little tricky. |
 | Portable across Unix-like development hosts | Portable across all development hosts (Linux,macOS,Unix,Windows) |
-| Clear output showing the set flags & options | Default output does not show direct compiler invokation |
-| | Easy managment of multiple executables & libraries (shared code) |
+| Clear output showing the set flags & options | Default output does not show direct compiler invocation |
+| | Easy management of multiple executables & libraries (shared code) |
 | | Combine host tests with device code in same project |
 | Some IDE support | Supported by many IDEs and editors |
 | Generate `compile-commands.json` via the `bear` cli utility | Generate `compile-commands.json` directly with CMake |
