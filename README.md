@@ -2,6 +2,8 @@
 
 ![AVR](https://github.com/tobanteEmbedded/embedded-cxx-cookbook/workflows/AVR/badge.svg)
 
+**WIP**
+
 Cheatsheet for working with C++ in an embedded bare-metal environment.
 
 - [Intro](#intro)
@@ -25,6 +27,16 @@ Cheatsheet for working with C++ in an embedded bare-metal environment.
   - [Assembler Flags](#assembler-flags)
 - [Linker](#linker)
   - [Linker Flags](#linker-flags)
+- [Tools](#tools)
+  - [ar](#ar)
+  - [nm](#nm)
+  - [objcopy](#objcopy)
+  - [objdump](#objdump)
+  - [ranlib](#ranlib)
+  - [readelf](#readelf)
+  - [size](#size)
+  - [strings](#strings)
+  - [strip](#strip)
 - [Build System](#build-system)
   - [Makefile vs. CMake](#makefile-vs-cmake)
   - [Makefile](#makefile)
@@ -78,9 +90,10 @@ For the complete list see: [GCC manual](https://gcc.gnu.org/onlinedocs/gcc/ARM-O
 
 #### AVR Architecture Flags
 
-| **Flag** | **Description**                                                                            | **gcc**            | **clang**          |
-| -------- | ------------------------------------------------------------------------------------------ | ------------------ | ------------------ |
-| `-mmcu=` | Select the MCU chip. See [GCC manual](https://gcc.gnu.org/onlinedocs/gcc/AVR-Options.html) | :heavy_check_mark: | :heavy_check_mark: |
+| **Flag** | **Description**                                                                                                         | **gcc**            | **clang**          |
+| -------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
+| `-mmcu=` | Select the MCU chip. See [GCC manual](https://gcc.gnu.org/onlinedocs/gcc/AVR-Options.html)                              | :heavy_check_mark: | :heavy_check_mark: |
+| `-mint8` | Assume int to be 8-bit integer. **Not** standard! See [GCC manual](https://gcc.gnu.org/onlinedocs/gcc/AVR-Options.html) | :heavy_check_mark: | :x:                |
 
 ### RISCV
 
@@ -163,6 +176,26 @@ Disable generation of information about every class with virtual functions for u
 | `-fstack-usage`          |                                           | :heavy_check_mark: | :x:                |
 | `--print-memory-usage`   |                                           | :heavy_check_mark: | :x:                |
 | `-static`                |                                           | :heavy_check_mark: | :heavy_check_mark: |
+
+## Tools
+
+### ar
+
+### nm
+
+### objcopy
+
+### objdump
+
+### ranlib
+
+### readelf
+
+### size
+
+### strings
+
+### strip
 
 ## Build System
 
