@@ -1,6 +1,6 @@
 # Embedded C++ Cookbook
 
-![AVR](https://github.com/tobiashienzsch/embedded-cxx-cookbook/workflows/AVR/badge.svg)
+![AVR](https://github.com/tobanteEmbedded/embedded-cxx-cookbook/workflows/AVR/badge.svg)
 
 Cheatsheet for working with C++ in an embedded bare-metal environment.
 
@@ -128,11 +128,11 @@ Disable generation of information about every class with virtual functions for u
 
 ### Debug Flags
 
-| **Flag** | **Description**                                                                           | **gcc**            | **clang**          |
-| -------- | ----------------------------------------------------------------------------------------- | ------------------ | ------------------ |
+| **Flag** | **Description**                                                                            | **gcc**            | **clang**          |
+| -------- | ------------------------------------------------------------------------------------------ | ------------------ | ------------------ |
 | `-Og`    | Enable optimization level which is tuned for best debuggability while still performing OK. | :heavy_check_mark: | :heavy_check_mark: |
-| `-g`     | Include debug symbols.                                                                    | :heavy_check_mark: | :heavy_check_mark: |
-| `-ggdb`  |                                                                                           | :heavy_check_mark: | :heavy_check_mark: |
+| `-g`     | Include debug symbols.                                                                     | :heavy_check_mark: | :heavy_check_mark: |
+| `-ggdb`  |                                                                                            | :heavy_check_mark: | :heavy_check_mark: |
 
 ### Warning Flags
 
